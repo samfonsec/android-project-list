@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_dimen">
+
+        <TextView
+            android:id="@+id/initial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:maxLength="1"
+            android:padding="@dimen/small_dimen"
+            android:textColor="@color/colorItemInitial"
+            android:textSize="@dimen/item_initial_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="P" />
+
+        <TextView
+            android:id="@+id/projectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_dimen"
+            android:textAllCaps="true"
+            android:textColor="@color/colorItemTitle"
+            android:textSize="@dimen/item_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/projectAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/initial"
+            app:layout_constraintTop_toTopOf="@id/initial"
+            tools:text="ProjectName" />
+
+        <TextView
+            android:id="@+id/projectAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_dimen"
+            android:textColor="@color/colorItemSubtitle"
+            app:layout_constraintBottom_toBottomOf="@id/initial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/initial"
+            app:layout_constraintTop_toBottomOf="@id/projectName"
+            tools:text="Mountain View, Charleston Road 1600" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
